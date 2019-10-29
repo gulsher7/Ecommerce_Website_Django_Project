@@ -18,7 +18,7 @@ class Product(models.Model):
     product_name = models.CharField(max_length=50, blank=True, null=True)
     product_price = models.CharField(max_length=10, blank=True, null=True)
     desc = models.TextField(blank=True, null=True)
-    product_pic= models.ImageField(upload_to='post_image', blank=True, null=True)
+    product_image= models.ImageField(upload_to='post_image', blank=True, null=True)
 
     def __str__(self):
         return self.product_name

@@ -7,7 +7,8 @@ from django.shortcuts import redirect
 """ ***********     Home Page      ******** """
 
 def index(request):
-	return render(request, 'shop/index.html')
+	data = Product.objects.all()
+	return render(request, 'shop/index.html', {'data':data})
 
 
 """ ***********     Contact Form for website visitors      ******** """
