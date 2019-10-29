@@ -1,0 +1,17 @@
+{% extends 'shop/basic.html' %}
+{% block title %}Login {% endblock%}
+{% block body %}
+<div class="container">
+<form method="POST" action="{% url 'login' %}">
+{% csrf_token %}
+
+{{ error }}<br/>
+username:<br/>
+<input type="text" name="username" required><br/><br/>
+password:<br/>
+<input type="password" name="password" required><br/><br/>
+<input class="btn btn-primary" type="submit" value="Login" onclick="myFunction()">
+
+</form>
+</div>
+{% endblock %}                           

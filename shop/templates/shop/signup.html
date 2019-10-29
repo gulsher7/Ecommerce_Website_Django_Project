@@ -1,0 +1,21 @@
+{% extends 'shop/basic.html' %}
+{% block title %}Sing up {% endblock%}
+{% block body %}
+<div class="container">
+<form method="POST" action="{% url 'signup' %}">{% csrf_token %}
+
+{{ usernameerror }}<br/>
+username:<br/>
+<input type="text" name="username" placeholder="enter your name" required ><br/><br/>
+password:<br/>
+<input type="password" name="password1" placeholder='enter your password' required><br/><br/>
+
+{{ passworderror }} <br/>
+
+confirm password:<br/>
+<input type="password" name="password2" placeholder="re-enter your password" required><br/><br/>
+<input class="btn btn-primary" type="submit" value="Sign Up!">
+
+</form>
+</div>
+{% endblock %}                           
