@@ -38,12 +38,13 @@
     </div>
 
     <div class="container mt-5">
-      <div class="card-deck">
-
+        <div class='row'>
+      <!-- <div class="card-deck"> -->
     {% if data %}
     {% for post in data %}
-        <div class="card">
-          <img src="{{ post.product_image.url }}" class="card-img-top img-responsive" alt="image">
+    <div class="col-md-3">
+        <div class="card m-2">
+          <img width=250px height=250px src="{{ post.product_image.url }}" class="card-img-top img-responsive" alt="image">
           <div class="card-body">
             <h5 class="card-title">{{ post.product_name }}</h5>
             <p class="card-text">{{ post.desc }}</p>
@@ -53,8 +54,14 @@
             <small class="text-muted"><button id="idstr" type="button" class="btn btn-success cart">Add to Cart</button></small>
           </div>
         </div>
+      </div>
          {% endfor %}
+    {% else %}
+    
+    <p>No products</p>
     {% endif %}
+
+    </div>
 
       </div>
     </div>
@@ -80,12 +87,13 @@
          
           <div class="col-sm-4">
              <h4 class="text-center" >Awareness: Junk Food</h4>
-             <a href="{% url 'junkfood' %}"><img src="{% static 'shop/images/junkfoodimage/pizza.jpg' %}" class="img-thumbnail img-fluid"></a>
+             <a href="{% url 'junkfood' %}"><img src="{% static 'shop/images/junkfoodimage/pizza.jpg' %}" class="img-thumbnail img-fluid" ></a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Screen.press -->
    {% endblock %}
 
    {% block js %}
