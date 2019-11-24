@@ -49,8 +49,9 @@
           {% endif %}
           <div class="card-body">
             <h5 class="card-title">{{ post.product_name }}</h5>
-            <p class="card-text">{{ post.desc }}</p>
-            <p class="card-text">{{ post.product_price }}</p>
+            <p class="card-text">{{ post.desc }} </p>
+
+            <p class="card-text"><strong>Rs.</strong> {{ post.product_price }}</p>
           </div>
           <div class="card-footer">
             <small class="text-muted"><button id="idstr" type="button" class="btn btn-success cart">Add to Cart</button></small>

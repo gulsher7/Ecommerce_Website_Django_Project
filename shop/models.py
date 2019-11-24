@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
+
 class Contact(models.Model):
 	user_id = models.AutoField(primary_key=True)
 	user_name=models.CharField(max_length=50, blank=False)
